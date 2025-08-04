@@ -12,6 +12,6 @@ export default class Button extends Component {
     }
 
   render() {
-    return <button onCLick={this.onClickButtonOK}>OK</button>
+    return <button onClick={this.onClickButtonOK}>OK</button>
   }
 }

@@ -1,11 +1,16 @@
 import React from 'react'
-import Button from './class-components';
-import {Calculator2} from './calculator';
-import { EventData1 } from './event-data';
-import RefsArray from './refs-array';
-import MessageBox from './state-func';
+import Header2 from './context-header2';
+import Content2 from './context-content2';
+import { userContext } from './context';
+
 
 
 export default function App() {
-  return <MessageBox/>
+  let [user,setUser] = React.useState('')
+  return (
+    <userContext.Provider value={[user, setUser]}>
+      <Header2/>
+      <Content2/>
+    </userContext.Provider>
+  )
 }
